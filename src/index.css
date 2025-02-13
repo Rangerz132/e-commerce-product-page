@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100..900&display=swap');
+@import "tailwindcss";
+
+@theme{
+
+  --font-kumbh-sans : "Kumbh Sans", serif;
+
+  --color-primary-orange : hsl(26, 100%, 55%),
+  --color-primary-pale-orange: hsl(25, 100%, 94%),
+
+  --color-neutral-very-dark-blue: hsl(220, 13%, 13%),
+  --color-dark-grayish-blue: hsl(219, 9%, 45%),
+  --color-grayish-blue: hsl(220, 14%, 75%),
+  --color-light-grayish-blue: hsl(220, 14%, 75%)
+}
+
+@layer base{
+
+  body{
+    @apply font-kumbh-sans text-base
+  }
+}
+
+@layer utilities{
+  .wrapper{
+    @apply  max-w-[1280px] px-6 mx-auto
+  }
+}
