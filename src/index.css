@@ -3,9 +3,9 @@
 
 @theme{
 
-  --font-kumbh-sans : "Kumbh Sans", serif;
+  --font-kumbh-sans : "Kumbh Sans", serif,
 
-  --color-primary-orange : hsl(26, 100%, 55%),
+  --color-primary-orange: hsl(26, 100%, 55%),
   --color-primary-pale-orange: hsl(25, 100%, 94%),
 
   --color-neutral-very-dark-blue: hsl(220, 13%, 13%),
