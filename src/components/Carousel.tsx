@@ -25,7 +25,7 @@ const Carousel = (props: { slides: ImageType[] }) => {
   return (
     <div>
       {/** Slides container */}
-      <div className="w-full relative  overflow-hidden h-86">
+      <div className="w-full relative overflow-hidden h-86">
         {/** Slides */}
         <div className="transition-transform duration-500">
           {props.slides.map((slide, index) => (

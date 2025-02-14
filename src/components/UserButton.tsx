@@ -8,7 +8,7 @@ const UserButton = (props: { onClick: () => void }) => {
   return (
     <div
       onClick={() => handleOnClick()}
-      className="w-6 h-6 rounded-full flex items-center justify-center cursor-pointer"
+      className="w-6 h-6 rounded-full flex items-center justify-center cursor-pointer md:w-10 md:h-10"
     >
       <img src={UserAvatar} alt={"User avatar"} />
     </div>

@@ -3,6 +3,7 @@ import CartIcon from "../assets/images/icon-cart.svg";
 import Logo from "./Logo";
 import UserButton from "./UserButton";
 import { MenuContext, useMenuContext } from "../contexts/MenuContext";
+import Menu from "./Menu";
 
 const Nav = () => {
   const { setMenu } = useMenuContext(MenuContext);
@@ -12,20 +13,24 @@ const Nav = () => {
   }
 
   return (
-    <div className="bg-white py-6 border-b border-neutral-200">
+    <div className="bg-white py-6 border-b border-neutral-200 md:py-0">
       <div className="wrapper flex flex-row justify-between items-center">
-        <div className="flex flex-row items-center space-x-4">
+        <div className="flex flex-row items-center space-x-10">
           {/** Hamburger */}
           <div
             onClick={() => handleHamburgerClick()}
-            className="cursor-pointer"
+            className="cursor-pointer md:hidden"
           >
             <img src={HamburgerIcon} alt={"Menu icon"} />
           </div>
           {/** Logo */}
           <Logo />
+          {/** Desktop menu */}
+          <div className="hidden md:flex">
+            <Menu />
+          </div>
         </div>
-        <div className="flex flex-row items-center space-x-4">
+        <div className="flex flex-row items-center space-x-10">
           {/** Cart */}
           <div className="cursor-pointer">
             <img src={CartIcon} alt={"Cart icon"} />
