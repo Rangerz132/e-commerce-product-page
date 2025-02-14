@@ -4,8 +4,8 @@ import { setDiscount } from "../services/DiscountService";
 
 const Product = (props: { productItem: ProductItem }) => {
   return (
-    <div className="flex flex-col">
-      <Carousel />
+    <div className="flex flex-col space-y-6">
+      <Carousel slides={props.productItem.images} />
       <div className="wrapper">
         {/** Product data */}
         <div className="flex flex-col space-y-5">

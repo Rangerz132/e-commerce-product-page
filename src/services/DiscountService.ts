@@ -1,4 +1,4 @@
-import { Discount } from "../data";
+import { Discount } from "../types";
 
 export function setDiscount(price: number, discount: Discount): number {
   if (discount.value === 0) {

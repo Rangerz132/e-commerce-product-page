@@ -1,3 +1,9 @@
+import { Discount, ImageType } from "./types";
+import ProductImage1 from "./assets/images/image-product-1.jpg";
+import ProductImage2 from "./assets/images/image-product-2.jpg";
+import ProductImage3 from "./assets/images/image-product-3.jpg";
+import ProductImage4 from "./assets/images/image-product-4.jpg";
+
 export type ProductItem = {
   id: string;
   name: string;
@@ -5,9 +11,8 @@ export type ProductItem = {
   company: string;
   price: number;
   discount: Discount;
+  images: ImageType[];
 };
-
-export type Discount = { value: number; type: "number" | "percent" };
 
 export const SNEAKER_1: ProductItem = {
   id: "1",
@@ -20,4 +25,22 @@ export const SNEAKER_1: ProductItem = {
     value: 50,
     type: "percent",
   },
+  images: [
+    {
+      src: ProductImage1,
+      alt: "Fall limited edition sneakers image 1",
+    },
+    {
+      src: ProductImage2,
+      alt: "Fall limited edition sneakers image 2",
+    },
+    {
+      src: ProductImage3,
+      alt: "Fall limited edition sneakers image 3",
+    },
+    {
+      src: ProductImage4,
+      alt: "Fall limited edition sneakers image 4",
+    },
+  ],
 };
