@@ -1,4 +1,4 @@
-import { Discount, ImageType } from "./types";
+import { CartProductItem, Discount, ImageType } from "./types";
 import ProductImage1 from "./assets/images/image-product-1.jpg";
 import ProductImage2 from "./assets/images/image-product-2.jpg";
 import ProductImage3 from "./assets/images/image-product-3.jpg";
@@ -43,4 +43,9 @@ export const SNEAKER_1: ProductItem = {
       alt: "Fall limited edition sneakers image 4",
     },
   ],
+};
+
+export const CART_SNEAKER_1: CartProductItem = {
+  productItem: SNEAKER_1,
+  amount: 3,
 };

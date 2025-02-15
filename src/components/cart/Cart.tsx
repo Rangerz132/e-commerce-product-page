@@ -1,4 +1,6 @@
 import { CartContext, useCartContext } from "../../contexts/CartContext";
+import { CART_SNEAKER_1 } from "../../data";
+import CartItem from "./CartItem";
 import EmptyCart from "./EmptyCart";
 
 const Cart = () => {
@@ -13,7 +15,9 @@ const Cart = () => {
         <div className="font-bold p-6 border-b-[0.5px] border-b-neutral-200">
           Cart
         </div>
-        <EmptyCart />
+        <div className="p-6">
+          <CartItem cartProductItem={CART_SNEAKER_1} />
+        </div>
       </div>
     </div>
   );
