@@ -11,7 +11,7 @@ const SidebarMenu = () => {
 
   return (
     <div
-      className={`w-[70%] h-screen bg-white p-6 absolute z-3 border-r border-neutral-200 top-0 ${
+      className={`w-[70%] h-screen bg-white p-6 fixed z-3 border-r border-neutral-200 top-0 ${
         menu ? "left-0" : "-left-[70%]"
       } transition-all duration-300`}
     >
