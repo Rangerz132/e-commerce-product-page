@@ -4,21 +4,19 @@ import Logo from "./Logo";
 import UserButton from "./button/UserButton";
 import { MenuContext, useMenuContext } from "../contexts/MenuContext";
 import Menu from "./Menu";
+import { CartContext, useCartContext } from "../contexts/CartContext";
 
 const Nav = () => {
   const { setMenu } = useMenuContext(MenuContext);
-
-  function handleHamburgerClick() {
-    setMenu((prevState) => !prevState);
-  }
+  const { setCart } = useCartContext(CartContext);
 
   return (
     <div className="bg-white py-6 border-b border-neutral-200 md:py-0">
       <div className="wrapper flex flex-row justify-between items-center">
-        <div className="flex flex-row items-center space-x-10">
+        <div className="flex flex-row items-center space-x-4 md:space-x-10">
           {/** Hamburger */}
           <div
-            onClick={() => handleHamburgerClick()}
+            onClick={() => setMenu((prevState) => !prevState)}
             className="cursor-pointer md:hidden"
           >
             <img src={HamburgerIcon} alt={"Menu icon"} />
@@ -30,9 +28,12 @@ const Nav = () => {
             <Menu />
           </div>
         </div>
-        <div className="flex flex-row items-center space-x-10">
+        <div className="flex flex-row items-center space-x-4 md:space-x-10">
           {/** Cart */}
-          <div className="cursor-pointer">
+          <div
+            onClick={() => setCart((prevState) => !prevState)}
+            className="cursor-pointer"
+          >
             <img src={CartIcon} alt={"Cart icon"} />
           </div>
           {/** User */}

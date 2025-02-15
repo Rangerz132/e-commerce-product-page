@@ -1,6 +1,7 @@
 import { ProductItem } from "../../data";
-import AddToCartButton from "../button/AddToCartButton";
+
 import Carousel from "../Carousel";
+import ProductAddToCart from "./ProductAddToCart";
 import ProductData from "./ProductData";
 
 const ProductSection = (props: { productItem: ProductItem }) => {
@@ -9,7 +10,7 @@ const ProductSection = (props: { productItem: ProductItem }) => {
       <Carousel slides={props.productItem.images} />
       <div className="max-w-[1280px] px-6 mx-auto md:px-0 md:max-w-none md:mx-0 flex flex-col space-y-6">
         <ProductData productItem={props.productItem} />
-        <AddToCartButton />
+        <ProductAddToCart productItem={props.productItem} />
       </div>
     </section>
   );

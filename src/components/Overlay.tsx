@@ -5,7 +5,7 @@ const Overlay = () => {
 
   return (
     <div
-      className={`absolute z-2 left-0 top-0 w-screen h-screen transition-all duration-300 ${
+      className={`fixed z-2 left-0 top-0 w-screen h-screen transition-all duration-300 ${
         menu
           ? "opacity-75 bg-black pointer-events-auto"
           : "opacity-0 pointer-events-none"

@@ -19,7 +19,7 @@
   }
 
   section {
-    @apply md:py-20;
+    @apply pb-20 md:py-20;
   }
 }
 

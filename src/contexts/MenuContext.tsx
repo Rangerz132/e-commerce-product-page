@@ -4,6 +4,8 @@ type MenuContextProviderProps = {
   children: React.ReactNode;
 };
 
+
+
 type MenuContext = {
   menu: boolean;
   setMenu: React.Dispatch<React.SetStateAction<boolean>>;
