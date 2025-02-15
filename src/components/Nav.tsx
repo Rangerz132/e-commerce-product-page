@@ -1,7 +1,7 @@
 import HamburgerIcon from "../assets/images/icon-menu.svg";
 import CartIcon from "../assets/images/icon-cart.svg";
 import Logo from "./Logo";
-import UserButton from "./UserButton";
+import UserButton from "./button/UserButton";
 import { MenuContext, useMenuContext } from "../contexts/MenuContext";
 import Menu from "./Menu";
 

@@ -17,10 +17,18 @@
   body {
     @apply font-kumbh-sans text-base;
   }
+
+  section {
+    @apply md:py-20;
+  }
 }
 
 @layer components {
   .wrapper {
     @apply max-w-[1280px] px-6 mx-auto;
+  }
+
+  .button-1 {
+    @apply bg-primary-orange  rounded-lg text-neutral-very-dark-blue font-semibold;
   }
 }

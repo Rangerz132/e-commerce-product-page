@@ -1,4 +1,4 @@
-import UserAvatar from "../assets/images/image-avatar.png";
+import UserAvatar from "../../assets/images/image-avatar.png";
 
 const UserButton = (props: { onClick: () => void }) => {
   function handleOnClick() {

@@ -16,7 +16,7 @@ const Menu = () => {
           key={key}
           to={route.path as string}
           onClick={() => handleLinkClick()}
-          className="font-bold capitalize text-xl md:font-normal md:text-base md:text-neutral-dark-grayish-blue border-b-0 md:py-6 transition-all duration-300 md:border-b-4 md:border-b-transparent hover:md:border-b-primary-orange"
+          className="font-bold capitalize text-xl md:font-normal md:text-base md:text-neutral-dark-grayish-blue border-b-0 md:py-10 transition-all duration-300 md:border-b-4 md:border-b-transparent hover:md:border-b-primary-orange"
         >
           {route.name}
         </Link>
