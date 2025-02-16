@@ -1,5 +1,5 @@
 import { MenuContext, useMenuContext } from "../contexts/MenuContext";
-import { routeMap } from "../routes";
+import { menuRoutes } from "../routes";
 import { Link } from "react-router";
 
 const Menu = () => {
@@ -7,9 +7,9 @@ const Menu = () => {
 
   return (
     <div className="flex flex-col space-y-6 md:flex-row md:space-y-0 md:space-x-6">
-      {Array.from(routeMap.entries()).map(([key, route]) => (
+      {menuRoutes.map((route) => (
         <Link
-          key={key}
+          key={route.name}
           to={route.path as string}
           onClick={() => setMenu(false)}
           className="font-bold capitalize text-xl md:font-normal md:text-base md:text-neutral-dark-grayish-blue border-b-0 md:py-6 transition-all duration-300 md:border-b-4 md:border-b-transparent hover:md:border-b-primary-orange"

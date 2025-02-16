@@ -10,6 +10,9 @@ const ProductAddToCart = (props: { productItem: ProductItem }) => {
   const dispatch = useDispatch();
 
   function addToCart() {
+    if (value <= 0) {
+      return;
+    }
     dispatch(addProduct({ productItem: props.productItem, amount: value }));
   }
 

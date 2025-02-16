@@ -4,19 +4,26 @@ import Men from "./pages/Men";
 import Women from "./pages/Women";
 import About from "./pages/About";
 import Collections from "./pages/Collections";
+import Layout from "./pages/Layout";
 
 const routeDefinitions = {
-  home: { name: "home", path: "/", element: <Home /> },
-  men: { name: "men", path: "/men", element: <Men /> },
-  women: { name: "women", path: "/women", element: <Women /> },
-  about: { name: "about", path: "/about", element: <About /> },
-  collections: {
-    name: "collections",
-    path: "/collections",
-    element: <Collections />,
+  root: {
+    path: "/",
+    element: <Layout />,
+    children: [
+      { path: "", element: <Home />, name: "Home" },
+      { path: "men", element: <Men />, name: "Men" },
+      { path: "women", element: <Women />, name: "Women" },
+      { path: "about", element: <About />, name: "About" },
+      { path: "collections", element: <Collections />, name: "Collections" },
+    ],
   },
 };
 
-export const routes: RouteObject[] = Object.values(routeDefinitions);
-export const routeMap = new Map(Object.entries(routeDefinitions));
+export const routes: RouteObject[] = [routeDefinitions.root];
 export const router = createBrowserRouter(routes);
+
+export const menuRoutes = routeDefinitions.root.children.map((route) => ({
+  name: route.name as string,
+  path: `/${route.path}`,
+}));
