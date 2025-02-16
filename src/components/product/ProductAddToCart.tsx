@@ -2,12 +2,15 @@ import IncrementButton from "../button/IncrementButton";
 import AddToCartButton from "../button/AddToCartButton";
 import { ProductItem } from "../../data";
 import { useState } from "react";
+import { useDispatch } from "react-redux";
+import { addProduct } from "../../state/cart/cartSlice";
 
 const ProductAddToCart = (props: { productItem: ProductItem }) => {
   const [value, setValue] = useState<number>(0);
+  const dispatch = useDispatch();
 
   function addToCart() {
-    console.log(`${props.productItem.name} added ${value}x`);
+    dispatch(addProduct({ productItem: props.productItem, amount: value }));
   }
 
   return (

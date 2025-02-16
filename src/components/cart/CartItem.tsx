@@ -1,14 +1,22 @@
 import { CartProductItem } from "../../types";
 import TrashIcon from "../../assets/images/icon-delete.svg";
 import { setDiscount } from "../../services/DiscountService";
+import { removeProduct } from "../../state/cart/cartSlice";
+import { useDispatch } from "react-redux";
 
 const CartItem = (props: { cartProductItem: CartProductItem }) => {
+  const dispatch = useDispatch();
   function getProductPriceWithDiscount(): number {
     return setDiscount(
       props.cartProductItem.productItem.price,
       props.cartProductItem.productItem.discount
     );
   }
+
+  function removeFromCart() {
+    dispatch(removeProduct(props.cartProductItem));
+  }
+
   return (
     <div className="flex flex-row space-x-4 justify-between items-center ">
       {/** Product Image */}
@@ -35,7 +43,10 @@ const CartItem = (props: { cartProductItem: CartProductItem }) => {
         </div>
       </div>
       {/** Delete Product */}
-      <div className="basis-1/6 flex items-center justify-center cursor-pointer">
+      <div
+        onClick={() => removeFromCart()}
+        className="basis-1/6 flex items-center justify-center cursor-pointer"
+      >
         <img src={TrashIcon} alt={"Trash icon"} />
       </div>
     </div>

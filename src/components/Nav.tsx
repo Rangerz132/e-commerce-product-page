@@ -1,14 +1,12 @@
 import HamburgerIcon from "../assets/images/icon-menu.svg";
-import CartIcon from "../assets/images/icon-cart.svg";
 import Logo from "./Logo";
 import UserButton from "./button/UserButton";
 import { MenuContext, useMenuContext } from "../contexts/MenuContext";
 import Menu from "./Menu";
-import { CartContext, useCartContext } from "../contexts/CartContext";
+import CartButton from "./cart/CartButton";
 
 const Nav = () => {
   const { setMenu } = useMenuContext(MenuContext);
-  const { setCart } = useCartContext(CartContext);
 
   return (
     <div className="bg-white py-6 border-b border-neutral-200 md:py-0">
@@ -29,14 +27,9 @@ const Nav = () => {
           </div>
         </div>
         <div className="flex flex-row items-center space-x-4 md:space-x-10">
-          {/** Cart */}
-          <div
-            onClick={() => setCart((prevState) => !prevState)}
-            className="cursor-pointer"
-          >
-            <img src={CartIcon} alt={"Cart icon"} />
-          </div>
-          {/** User */}
+          {/** Cart button */}
+          <CartButton />
+          {/** User button */}
           <UserButton onClick={() => {}} />
         </div>
       </div>

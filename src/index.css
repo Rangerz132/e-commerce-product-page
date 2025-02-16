@@ -29,6 +29,6 @@
   }
 
   .button-1 {
-    @apply bg-primary-orange  rounded-lg text-neutral-very-dark-blue font-semibold;
+    @apply bg-primary-orange rounded-lg text-neutral-very-dark-blue font-semibold hover:text-white hover:bg-neutral-very-dark-blue transition-all duration-300;
   }
 }
